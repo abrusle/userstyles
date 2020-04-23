@@ -1,0 +1,78 @@
+/* ==UserStyle==
+@name           Ecosia UCSS
+@namespace      github.com/openstyles/stylus
+@version        0.0.1
+@description    Slight changes to the Ecosia search page.
+@author         Alexis Bruslé
+==/UserStyle== */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans&display=swap');
+
+@-moz-document domain("ecosia.org") {
+
+	body, .result, .more-results-link
+	{
+		font-family: 'Open Sans', sans-serif;
+	}
+
+	.card-ad,
+	.card-desktop .product-ad
+	{
+		height: 0;
+		overflow: hidden;
+		margin: 0;
+		padding: 0;
+		border: none;
+	}
+
+	.card-relatedsearches
+	{
+		display: none;
+	}
+
+	.card-desktop + .card-desktop
+	{
+		margin: 0;
+	}
+
+	.card-web .result,
+	.mainline .result:first-of-type
+	{
+		background-color: hsl(0, 0%, 98%);
+		margin: 1em 0;
+		border-radius: 0.4em;
+		transition: background-color 0.3s cubic-bezier(.23,1,.32,1);
+	}
+
+	.card-web .result:hover
+	{
+		background-color: hsl(0, 0%, 95%);
+	}
+
+	.card-web .result a.result-title
+	{
+		padding: 1rem 1rem 0.2rem;
+	}
+
+	.card-web .result-url
+	{
+		padding: 0 1rem;
+	}
+
+	.card-web .result-snippet-link p
+	{
+		padding: 0.2rem 1rem 1rem;
+	}
+
+	.thumbnail-item
+	{
+		box-shadow: none;
+		border: 1px solid #bbb;
+	}
+
+	.more-results-link
+	{
+		display: block;
+		text-align: right;
+		opacity: 0.7;
+	}
+}
