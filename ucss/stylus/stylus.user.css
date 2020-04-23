@@ -1,0 +1,50 @@
+/* ==UserStyle==
+@name           Stylus Minimal
+@namespace      https://github.com/abrusle
+@version        0.0.1
+@description    Gives a minimalistic look to the Stylus extension.
+@author         Alexis Bruslé
+@homepageURL	https://github.com/abrusle/userstyles/ucss/stylus
+==/UserStyle== */
+
+@-moz-document url-prefix("moz-extension://ff031beb-9de3-4d4d-a1fb-001660af5b02") {
+    #header
+    {
+        background-color: hsl(0, 0%, 99%);
+        color: black;
+        box-shadow: none;
+    }
+    
+    #sections,
+    body
+    {
+        background-color: hsl(0, 0%, 95%);
+    }
+    
+    
+    input:not([type="checkbox"]),
+    select
+    {
+        box-sizing: border-box;
+        height: 2.2em;
+        padding-left: 1em;
+        border: 1px solid hsl(0, 0%, 90%);
+        background-color: white;
+        border-radius: 0.2em;
+    }
+    
+    intput:not([type="checkbox"]):focus
+    {
+        border: 1px solid black;
+    }
+    
+    button
+    {
+        background-image: none;
+        padding: 0.4em 0.7em !important;
+        border-radius: 0.2em;
+        border: 1px solid hsl(0, 0%, 86%);
+        cursor: pointer;
+        transition: background-color .15s, border-color .15s;
+    }
+    }

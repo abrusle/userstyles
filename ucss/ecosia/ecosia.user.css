@@ -1,10 +1,12 @@
 /* ==UserStyle==
-@name           Ecosia UCSS
-@namespace      github.com/openstyles/stylus
+@name           Ecosia Tweaks
+@namespace      https://github.com/abrusle
 @version        0.0.1
 @description    Slight changes to the Ecosia search page.
 @author         Alexis Bruslé
+@homepageURL	https://github.com/abrusle/userstyles/ucss/ecosia
 ==/UserStyle== */
+
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans&display=swap');
 
 @-moz-document domain("ecosia.org") {
