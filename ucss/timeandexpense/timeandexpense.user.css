@@ -1,0 +1,297 @@
+/* ==UserStyle==
+@name           Time & Expense
+@namespace      https://github.com/abrusle
+@version        0.0.1
+@description    Complete restyle of Time & Expense
+@author         Alexis Bruslé
+@homepageURL	https://github.com/abrusle/userstyles/ucss/timeandexpense
+==/UserStyle== */
+
+@-moz-document domain("emea-timeandexpense.allegisgroup.com") 
+{
+    #Form1
+    {
+        height: 100vh;
+    }
+    
+    /* Navigation Panel */
+    #left
+    {
+        top: 0;
+        height: 100%;
+        position: absolute;
+        order: 1;
+        background-color: hsl(215, 31%, 97%);
+        width: auto;
+        border: none;
+        opacity: 1; /*  TEMP  */
+    }
+    
+    #left #prinav
+    {
+        border: none;
+        background: transparent;
+        padding-top: 5.3em;
+    }
+    
+    #prinav::before
+    {
+        content: 'Time & Expense';
+        font-size: 2em;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        box-sizing: border-box;
+        padding: 1rem 1rem;
+        background-color: white;
+        border-bottom: 1px solid hsl(0, 0%, 95%);
+        width: 100%;
+        
+    }
+    
+    #prinav a
+    {
+        width: 100%;
+        font-size: 1.1em;
+        padding: 1.1em 1.5em 1.1em 4em;
+        margin: 0;
+        box-sizing: border-box;
+        border: none;
+        border-bottom: 1px solid hsl(0, 0%, 95%);
+        background: transparent;
+        transition: color 0.2s;
+    }
+    
+    #prinav a:hover
+    {
+        color: black;
+        background-color: #00000009;
+    }
+    
+    #prinav a:hover::before
+    {
+        opacity: 1;
+    }
+    
+    #prinav a::before
+    {
+        content: '';
+        display: block;
+        background-size: contain;
+        width: 1.5em;
+        height: 1.5em;
+        position: absolute;
+        left: 1em;
+        transform: translatey(-0.12em);
+        opacity: 0.7;
+        transition: opacity 0.2s;
+    }
+    
+    #prinav a[href="consultanthome.aspx"]::before                      {background-image: url("https://raw.githubusercontent.com/refactoringui/heroicons/master/src/outline-md/md-home.svg");}
+    #prinav a[href="timecardhome.aspx"]::before                        {background-image: url("https://raw.githubusercontent.com/refactoringui/heroicons/master/src/outline-md/md-calendar.svg");}
+    #prinav a[href="expenses.aspx"]::before                            {background-image: url("https://raw.githubusercontent.com/refactoringui/heroicons/master/src/outline-md/md-currency-euro.svg");}
+    #prinav a[href="timeexpensesum.aspx"]::before                      {background-image: url("https://raw.githubusercontent.com/refactoringui/heroicons/master/src/outline-md/md-chart-pie.svg");}
+    #prinav a[href="alltimecards.aspx"]::before                        {background-image: url("https://raw.githubusercontent.com/refactoringui/heroicons/master/src/outline-md/md-search.svg");}
+    #prinav a[href="OperatingCompanyContactInfo.aspx"]::before         {background-image: url("https://raw.githubusercontent.com/refactoringui/heroicons/master/src/outline-md/md-information-circle.svg");}
+    #prinav a[href="allexpensereports.aspx"]::before                   {background-image: url("https://raw.githubusercontent.com/refactoringui/heroicons/master/src/outline-md/md-document-report.svg");}
+    #prinav a[href="UserGuide.aspx?doc=netcenter_tne.pdf"]::before     {background-image: url("https://raw.githubusercontent.com/refactoringui/heroicons/master/src/outline-md/md-book-open.svg");}
+    #prinav a[href="useremailpreferences.aspx"]::before                {background-image: url("https://raw.githubusercontent.com/refactoringui/heroicons/master/src/outline-md/md-adjustments.svg");}
+    #prinav a[href="changepassword.aspx"]::before                      {background-image: url("https://raw.githubusercontent.com/refactoringui/heroicons/master/src/outline-md/md-key.svg");}
+    #prinav a[href="termsandconditions.aspx?qsViewTerms=true"]::before {background-image: url("https://raw.githubusercontent.com/refactoringui/heroicons/master/src/outline-md/md-scale.svg");}
+    #prinav a[href="content/help/en-US/timecardhelp.pdf"]::before      {background-image: url("https://raw.githubusercontent.com/refactoringui/heroicons/master/src/outline-md/md-question-mark-circle.svg");}
+    #prinav a[href="logout.aspx"]::before                              {background-image: url("https://raw.githubusercontent.com/refactoringui/heroicons/master/src/outline-md/md-logout.svg");}
+    
+}
+
+@-moz-document url-prefix("https://emea-timeandexpense.allegisgroup.com/Webtime/Login.aspx"), 
+               url-prefix("https://emea-timeandexpense.allegisgroup.com/Webtime/login.aspx") 
+{
+    form[action="./Login.aspx"]
+    {
+        height: 100vh;
+        overflow: hidden;
+    }
+    
+    
+    table, tbody, tr, td
+    {
+        border: none;
+        box-sizing: border-box;
+        display: block;
+    }
+    
+    .row3
+    {
+        background-repeat: repeat-x;
+        background-position-x: 2em;
+    }
+    
+    form .boldbluemessage:first-of-type
+    {
+        margin-top: 18vh;
+    }
+    
+    /* Language selection */
+    table:nth-of-type(2)
+    {
+        background-color: #eee;
+        position: fixed !important;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        box-sizing: border-box;
+        padding: 1.5em;
+        
+        border: 1px solid #e3e3e3;
+        border-top-left-radius: 0.3rem;
+        border-bottom-left-radius: 0.3rem;
+        
+        opacity: 0.3;
+        transition: opacity 0.15s;
+    }
+    
+    table:nth-of-type(2):hover
+    {
+        opacity: 1;
+    }
+    
+    table:nth-of-type(2) tr
+    {
+        height: 2.5em;
+    }
+    
+    table:nth-of-type(2) tr a
+    {
+        padding: 0.4em 1em;
+        border-radius: 0.2em;
+    }
+    
+    table:nth-of-type(2) tr a:hover
+    {
+        background-color: #0001;
+        text-decoration: none;
+    }
+    
+    /* Login Form */
+    table:nth-of-type(3)
+    {
+        width: 25rem;
+    }
+    
+    table:nth-of-type(3) tr:first-of-type
+    {
+        display:none;
+    }
+    table:nth-of-type(3) tr
+    {
+        border-radius: .3rem;
+        background-color: hsl(0, 0%, 93%);
+        border: none;
+        margin: 1em 0;
+        padding: 0.5em;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: stretch;
+        height: 4.5em;
+        box-sizing: border-box;
+        overflow: hidden;
+    }
+    
+    table:nth-of-type(3) td > *
+    {
+        height: 100%;
+        box-sizing: border-box;
+    }
+    
+    table:nth-of-type(3) td:nth-of-type(2)
+    {
+        width: 75%;
+    }
+    
+    table:nth-of-type(3) .leftth
+    {
+        width: 15%;
+        color: #393939;
+        padding: 0;
+        margin-left: 0.5em;
+    }
+    
+    table:nth-of-type(3) tr:last-of-type .leftth
+    {
+        width: 0;
+        display: none;
+    }
+    
+    table:nth-of-type(3) .leftth span
+    {
+        display: flex;
+        align-items: center;
+        margin-left: 0.5rem;
+    }
+    
+    #txtUserName,
+    #txtPassword
+    {
+        border: none;
+        padding: 1em 2em 1em 1.5em;
+        width: 100% !important;
+        border-radius: 0.2rem;
+        background-color: hsl(0, 0%, 98%);
+        transition: background-color 0.1s;
+    }
+    
+    #txtUserName:hover,
+    #txtPassword:hover,
+    #txtUserName:focus,
+    #txtPassword:focus
+    {
+        background-color: white;
+    }
+    
+    table:nth-of-type(3) tr:last-of-type td:nth-of-type(2)
+    {
+        width: 103%;
+    }
+    
+    table:nth-of-type(3) tr:last-of-type 
+    {
+        background-color: black;
+    }
+    
+    #lBtnLogin
+    {
+        width: 100%;
+        padding: 0.6em 0.8em;
+        border-radius: 0.15rem;
+        color: white;
+        background-color: black;
+        font-size: 1.5em;
+        font-weight: bold;
+        border: none;
+    }
+    
+    #lBtnLogin:hover
+    {
+        cursor: pointer;
+        background-color: #484848;
+    }
+    
+    #hlinkForgotPassword
+    {
+        font-size: 0.8em;
+        font-weight: normal;
+        color: #bbb;
+        padding: 0.5em 0.7em;
+        border-radius: 0.2em;
+        background-color: transparent;
+        transition: color 0.2s, background-color 0.1s;
+    }
+    
+    #hlinkForgotPassword:hover
+    {
+        color: #444;
+        background-color: hsl(0, 0%, 97%);
+    }
+}
