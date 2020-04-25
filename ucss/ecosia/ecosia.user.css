@@ -1,10 +1,17 @@
 /* ==UserStyle==
 @name           Ecosia Tweaks
 @namespace      https://github.com/abrusle
-@version        0.0.1
+@version        0.0.2
 @description    Slight changes to the Ecosia search page.
 @author         Alexis Bruslé
 @homepageURL	https://github.com/abrusle/userstyles/ucss/ecosia
+
+@var color cardBg "Card Background" hsl(0, 0%, 98%)
+@var color cardHover "Card Hover" hsl(0, 0%, 95%)
+@var color ecosiaBlue "Ecosia Blue" #36ACB8
+@var color ecosiaOrange "Ecosia Orange" #FF7950
+@var color ecosiaGreen "Ecosia Green" #D3DA31
+@var color urlColor "URL Color" #009931
 ==/UserStyle== */
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans&display=swap');
@@ -14,6 +21,48 @@
 	body, .result, .more-results-link
 	{
 		font-family: 'Open Sans', sans-serif;
+	}
+	
+	.search-form-field
+	{
+		border-color: var(--cardHover);
+	}
+	
+	.search-form-field:hover, 
+	.search-form-field:active,
+	.search-form-field:focus-within
+	{
+		border-color: hsl(0, 0%, 80%);
+	}
+	
+	.search-form-field:focus-within
+	{
+		border-color: var(--ecosiaBlue);
+	}
+	
+	.search-header
+	{
+		background-color: var(--cardHover);
+	}
+	
+	.navbar-row
+	{
+		background-color: var(--cardBg);
+	}
+	
+	.navbar-link
+	{
+		padding: 1em 0.5em 0.8em;
+	}
+	
+	.navbar-item:not(.navbar-item-divider)
+	{
+		margin: 0;
+	}
+	
+	.navbar-item:hover
+	{
+		background-color: rgba(0, 0, 0, .02);
 	}
 
 	.card-ad,
@@ -39,7 +88,8 @@
 	.card-web .result,
 	.mainline .result:first-of-type
 	{
-		background-color: hsl(0, 0%, 98%);
+		background-color: var(--cardBg);
+		border: 1px solid var(--cardHover);
 		margin: 1em 0;
 		border-radius: 0.4em;
 		transition: background-color 0.3s cubic-bezier(.23,1,.32,1);
@@ -47,7 +97,8 @@
 
 	.card-web .result:hover
 	{
-		background-color: hsl(0, 0%, 95%);
+		background-color: var(--cardHover);
+		border-color: var(--ecosiaBlue);
 	}
 
 	.card-web .result a.result-title
@@ -64,11 +115,65 @@
 	{
 		padding: 0.2rem 1rem 1rem;
 	}
+	
+	.thumbnail-publisher,
+	.result-url, 
+	.result-url:active, 
+	.result-url:focus, 
+	.result-url:hover, 
+	.result-url:visited
+	{
+		color: var(--urlColor);
+	}
 
 	.thumbnail-item
 	{
 		box-shadow: none;
 		border: 1px solid #bbb;
+	}
+	
+	.thumbnail-item:hover
+	{
+		border-color: var(--ecosiaBlue);
+	}
+	
+	.thumbnail-list-images a
+	{
+		margin: 0;
+	}
+	
+	.video-slider-controls button
+	{
+		box-shadow: 0 2px 8px 0 rgba(0,0,0,.05),0 1px 4px 0 rgba(0,0,0,.05);
+	}
+	
+	.sidebar .footer
+	{
+		background-color: var(--cardHover);
+		border: none;
+	}
+	
+	.entity
+	{
+		background-color: var(--cardBg);
+		border: 1px solid var(--cardHover);
+		border-radius: 0.4rem;
+		overflow: hidden;
+		box-shadow: none;
+	}
+	
+	.entity-list li a
+	{
+		background-color: white;
+		padding: 0.5em;
+		border: 1px solid var(--cardHover);
+		border-radius: 0.2rem;
+		transition: border-color 0.2s;
+	}
+	
+	.entity-list li a:hover
+	{
+		border-color: var(--ecosiaBlue);
 	}
 
 	.more-results-link
