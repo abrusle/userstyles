@@ -5,10 +5,18 @@
 @description    Complete restyle of Time & Expense
 @author         Alexis Bruslé
 @homepageURL	https://github.com/abrusle/userstyles/ucss/timeandexpense
+
+@var color bgColor "Background" hsl(215, 31%, 97%)
+@var color navbarColor "Navbar Color" white
 ==/UserStyle== */
 
 @-moz-document domain("emea-timeandexpense.allegisgroup.com") 
 {
+	html, body
+	{
+		background-color: var(--bgColor);
+	}
+	
     #Form1
     {
         height: 100vh;
@@ -17,43 +25,37 @@
     /* Navigation Panel */
     #left
     {
-        top: 0;
-        height: 100%;
-        position: absolute;
+        top: 50%;
+		transform: translatey(-50%);
+		left: 2rem;
+        position: fixed;
         order: 1;
-        background-color: hsl(215, 31%, 97%);
-        width: auto;
+        background-color: var(--navbarColor);
+        width: 4em;
         border: none;
         opacity: 1; /*  TEMP  */
+		border-radius: 0.7rem;
+		overflow: hidden;
+		transition: width 0.3s;
+		box-shadow: 0px 2px 25px -5px rgba(0,0,0,0.2);
     }
+	
+	#left:hover
+	{
+		width: 22em;
+	}
     
     #left #prinav
     {
         border: none;
         background: transparent;
-        padding-top: 5.3em;
-    }
-    
-    #prinav::before
-    {
-        content: 'Time & Expense';
-        font-size: 2em;
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        box-sizing: border-box;
-        padding: 1rem 1rem;
-        background-color: white;
-        border-bottom: 1px solid hsl(0, 0%, 95%);
-        width: 100%;
-        
     }
     
     #prinav a
     {
         width: 100%;
         font-size: 1.1em;
+		white-space: nowrap;
         padding: 1.1em 1.5em 1.1em 4em;
         margin: 0;
         box-sizing: border-box;
