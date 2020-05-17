@@ -8,6 +8,7 @@
 
 @var color bgColor "Background" hsl(215, 31%, 97%)
 @var color navbarColor "Navbar Color" white
+@var color navbarHighlight "Navbar Highlight" #4A5568
 ==/UserStyle== */
 
 @-moz-document domain("emea-timeandexpense.allegisgroup.com") 
@@ -106,6 +107,65 @@
     
 }
 
+@-moz-document url-prefix("https://emea-timeandexpense.allegisgroup.com/webtime/consultanthome.aspx") 
+{
+	#prinav a[href="consultanthome.aspx"] {background-color: var(--navbarHighlight); color:white;}
+	#prinav a[href="consultanthome.aspx"]::before {filter: brightness(100);}
+}
+
+@-moz-document url-prefix("https://emea-timeandexpense.allegisgroup.com/webtime/timecardhome.aspx") 
+{
+	#prinav a[href="timecardhome.aspx"] {background-color: var(--navbarHighlight); color:white;}
+	#prinav a[href="timecardhome.aspx"]::before {filter: brightness(100);}
+}
+
+@-moz-document url-prefix("https://emea-timeandexpense.allegisgroup.com/webtime/expenses.aspx") 
+{
+	#prinav a[href="expenses.aspx"] {background-color: var(--navbarHighlight); color:white;}
+	#prinav a[href="expenses.aspx"]::before {filter: brightness(100);}
+}
+
+@-moz-document url-prefix("https://emea-timeandexpense.allegisgroup.com/webtime/timeexpensesum.aspx") 
+{
+	#prinav a[href="timeexpensesum.aspx"] {background-color: var(--navbarHighlight); color:white;}
+	#prinav a[href="timeexpensesum.aspx"]::before {filter: brightness(100);}
+}
+
+@-moz-document url-prefix("https://emea-timeandexpense.allegisgroup.com/webtime/alltimecards.aspx") 
+{
+	#prinav a[href="alltimecards.aspx"] {background-color: var(--navbarHighlight); color:white;}
+	#prinav a[href="alltimecards.aspx"]::before {filter: brightness(100);}
+}
+
+@-moz-document url-prefix("https://emea-timeandexpense.allegisgroup.com/webtime/OperatingCompanyContactInfo.aspx") 
+{
+	#prinav a[href="OperatingCompanyContactInfo.aspx"] {background-color: var(--navbarHighlight); color:white;}
+	#prinav a[href="OperatingCompanyContactInfo.aspx"]::before {filter: brightness(100);}
+}
+
+@-moz-document url-prefix("https://emea-timeandexpense.allegisgroup.com/webtime/allexpensereports.aspx") 
+{
+	#prinav a[href="allexpensereports.aspx"] {background-color: var(--navbarHighlight); color:white;}
+	#prinav a[href="allexpensereports.aspx"]::before {filter: brightness(100);}
+}
+
+@-moz-document url-prefix("https://emea-timeandexpense.allegisgroup.com/webtime/useremailpreferences.aspx") 
+{
+	#prinav a[href="useremailpreferences.aspx"] {background-color: var(--navbarHighlight); color:white;}
+	#prinav a[href="useremailpreferences.aspx"]::before {filter: brightness(100);}
+}
+
+@-moz-document url-prefix("https://emea-timeandexpense.allegisgroup.com/webtime/changepassword.aspx") 
+{
+	#prinav a[href="changepassword.aspx"] {background-color: var(--navbarHighlight); color:white;}
+	#prinav a[href="changepassword.aspx"]::before {filter: brightness(100);}
+}
+
+@-moz-document url-prefix("https://emea-timeandexpense.allegisgroup.com/webtime/termsandconditions.aspx?qsViewTerms=true") 
+{
+	#prinav a[href="termsandconditions.aspx?qsViewTerms=true"] {background-color: var(--navbarHighlight); color:white;}
+	#prinav a[href="termsandconditions.aspx?qsViewTerms=true"]::before {filter: brightness(100);}
+}
 @-moz-document url-prefix("https://emea-timeandexpense.allegisgroup.com/Webtime/Login.aspx"), 
                url-prefix("https://emea-timeandexpense.allegisgroup.com/Webtime/login.aspx") 
 {
