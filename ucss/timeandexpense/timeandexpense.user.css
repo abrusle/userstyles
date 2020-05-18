@@ -9,6 +9,7 @@
 @var color bgColor "Background" hsl(215, 31%, 97%)
 @var color navbarColor "Navbar Color" white
 @var color navbarHighlight "Navbar Highlight" #4A5568
+@var color tableColor "Table Color" hsl(0, 0%, 98%)
 ==/UserStyle== */
 
 @-moz-document domain("emea-timeandexpense.allegisgroup.com") 
@@ -29,6 +30,13 @@
     {
         height: 100vh;
     }
+
+    .row3
+	{
+		background: rgba(0, 0, 0, 0) url("https://www.toptal.com/designers/subtlepatterns/patterns/email-pattern.png") repeat scroll 0% 0%;
+		opacity: 0.7;
+		height: 5.3em;
+	}
     
     /* Navigation Panel */
     #left
@@ -112,6 +120,54 @@
     #prinav a[href="content/help/en-US/timecardhelp.pdf"]::before      {background-image: url("https://raw.githubusercontent.com/refactoringui/heroicons/master/src/outline-md/md-question-mark-circle.svg");}
     #prinav a[href="logout.aspx"]::before                              {background-image: url("https://raw.githubusercontent.com/refactoringui/heroicons/master/src/outline-md/md-logout.svg");}
     
+    #mainbody
+	{
+		z-index: 0;
+	}
+	
+	#mainbody > div:not(#left),
+	#mainbody > table
+	{
+		margin-left: 0 !important;
+		padding-left: var(--navbarWidth);
+		box-sizing: border-box;
+	}
+	
+	.bluelinksort a:link, .bluelinkwrap a:link
+	{
+		background-color: transparent;
+	}
+	
+	#Footer1_footer
+	{
+		background-image: none !important;
+		background-color: hsl(208, 48%, 96%);
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: flex-end;
+		padding: 1em !important;
+		box-sizing: border-box;
+	}
+	
+	#Footer1_footer > a,
+	#Footer1_footer > span:first-of-type
+	{
+		margin-left: 2em;
+	}
+	
+	#Footer1_footer,
+	.footer a,
+	.footer
+	{
+		color: hsl(208, 43%, 64%);
+	}
+	
+	#Footer1_footer a:hover
+	{
+		text-decoration: none;
+		color: hsl(208, 34%, 39%);
+		border: none;
+	}
 }
 
 @-moz-document url-prefix("https://emea-timeandexpense.allegisgroup.com/webtime/consultanthome.aspx") 
@@ -173,6 +229,219 @@
 	#prinav a[href="termsandconditions.aspx?qsViewTerms=true"] {background-color: var(--navbarHighlight); color:white;}
 	#prinav a[href="termsandconditions.aspx?qsViewTerms=true"]::before {filter: brightness(100);}
 }
+
+@-moz-document url-prefix("https://emea-timeandexpense.allegisgroup.com/Webtime/consultanthome.aspx")
+{
+    /*	     	        *
+	 *	    	        *
+	 *	CONSULTANT HOME	*
+	 *	     	        *
+	 *	     	        */
+
+	.content
+	{
+		margin: 0;
+	}
+	
+	.content > h1
+	{
+		margin-top: 1.1em;
+		font-size: 1.5em;
+	}
+	
+	.content > h1,
+	.content > p,
+	.content > table
+	{
+		margin-left: 2rem;
+	}
+	
+	.content > table
+	{
+		width: calc(100% - 4rem) !important; /* 4rem = 2 * mergin-left */
+	}
+	
+	#Time
+	{
+		padding: 0 !important;
+		border: 1px solid hsl(0, 0%, 90%);
+		border-collapse: collapse;
+	}
+	
+	#Time tr
+	{
+		height: 2rem;
+	}
+	
+	#Time td
+	{
+		margin: 0;
+		padding-left: 1rem;
+		text-align: left;
+	}
+	
+	#Time tbody tr:first-of-type
+	{
+		background-color: var(--lightGreyBlue);
+	}
+	
+	.mdyellow
+	{
+		background-color: hsl(0, 0%, 97%);
+	}
+	
+}
+
+@-moz-document url-prefix("https://emea-timeandexpense.allegisgroup.com/Webtime/TimeCardHome.aspx")
+{
+    /*	     	        *
+	 *	    	        *
+	 *	TIME CARD HOME	*
+	 *	     	        *
+	 *	     	        */
+	
+	#mainbody
+	{
+		height: 100%;
+	}
+	
+	#mainbody > table
+	{
+		margin-left: 2rem !important;
+		width: calc(100% - 4rem) !important; /* 4rem = 2 * mergin-left */
+	}
+	
+	#mainbody table:not(.invisible),
+	#mainbody thead:not(.invisible),
+	#mainbody tbody:not(.invisible),
+	#mainbody tr:not(.invisible),
+	#mainbody td:not(.invisible)
+	{
+		display: block;
+		border: none;
+	}
+	
+	#mainbody > table:nth-of-type(2) > tbody,
+	#repStandardTimecards_ctl00_StandardTime_Panel1
+	{
+		width: calc(100vw - var(--navbarWidth) - 4rem);
+		height: 100%;	
+	}
+	
+	#repStandardTimecards_ctl00_StandardTime_Panel1
+	{
+		border-radius: 0.15rem;
+		margin-bottom: 2em;
+		border-color: hsl(0, 0%, 90%);
+		box-sizing: border-box;
+	}
+	
+	.yellowbgdiv
+	{
+		background-color: var(--tableColor);
+	}
+	
+	.weekendth, .weekendTimeDisplay
+	{
+		background: url("https://www.toptal.com/designers/subtlepatterns/patterns/funky-lines.png") repeat scroll 0% 0%;
+		background-origin: border-box;
+		background-size: 20em;
+	}
+	
+	/* Time Table */
+	#repStandardTimecards_ctl00_StandardTime_Panel1 > table:last-child > tbody > tr > td > table
+	{
+		display: flex;
+		flex-flow: column nowrap;
+	}
+	
+	#repStandardTimecards_ctl00_StandardTime_Panel1 > table:last-child > tbody > tr > td > table > tbody > tr
+	{
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: flex-start;
+		width: 100%;
+		height: 3.5em;
+	}
+	
+	#repStandardTimecards_ctl00_StandardTime_Panel1 > table:last-child > tbody > tr > td > table > tbody > tr:nth-child(3)
+	{
+		display: none;
+	}
+	
+	
+	#repStandardTimecards_ctl00_StandardTime_Panel1 > table:last-child > tbody > tr > td > table > tbody > tr > td
+	{
+		margin: 0;
+		padding: 0 !important;
+		box-sizing: border-box;
+		min-width: 3rem;
+		width: 100%;
+		border-top: 1px solid #eee;
+		height: 100%;
+	}
+	
+	#repStandardTimecards_ctl00_StandardTime_Panel1 > table:last-child > tbody > tr > td > table > tbody > tr > td:not(:last-child)
+	{
+		/*border-right: 1px solid #eee;*/
+	}
+	
+	
+	#repStandardTimecards_ctl00_StandardTime_Panel1 > table:last-child > tbody > tr > td > table > tbody > tr > td:nth-child(1)
+	{
+		width: 15em !important;
+		min-width: 15em;
+	}
+	
+	#repStandardTimecards_ctl00_StandardTime_Panel1 > table:last-child > tbody > tr > td > table > tbody > tr > td:nth-child(1) {order: -1;}
+	#repStandardTimecards_ctl00_StandardTime_Panel1 > table:last-child > tbody > tr > td > table > tbody > tr > td:nth-child(2) {order: 7;}
+	#repStandardTimecards_ctl00_StandardTime_Panel1 > table:last-child > tbody > tr > td > table > tbody > tr > td:nth-child(3) {order: 1;}
+	#repStandardTimecards_ctl00_StandardTime_Panel1 > table:last-child > tbody > tr > td > table > tbody > tr > td:nth-child(4) {order: 2;}
+	#repStandardTimecards_ctl00_StandardTime_Panel1 > table:last-child > tbody > tr > td > table > tbody > tr > td:nth-child(5) {order: 3;}
+	#repStandardTimecards_ctl00_StandardTime_Panel1 > table:last-child > tbody > tr > td > table > tbody > tr > td:nth-child(6) {order: 4;}
+	#repStandardTimecards_ctl00_StandardTime_Panel1 > table:last-child > tbody > tr > td > table > tbody > tr > td:nth-child(7) {order: 5;}
+	#repStandardTimecards_ctl00_StandardTime_Panel1 > table:last-child > tbody > tr > td > table > tbody > tr > td:nth-child(8) {order: 6;}
+	#repStandardTimecards_ctl00_StandardTime_Panel1 > table:last-child > tbody > tr > td > table > tbody > tr > td:nth-child(9) {order: 8;}
+	
+	#repStandardTimecards_ctl00_StandardTime_Panel1 > table:last-child > tbody > tr > td > table > tbody > tr > td input:not([readonly])
+	{
+		width: 100% !important;
+		height: 100%;
+		border-color: transparent;
+		padding: 1em;
+		box-sizing: border-box;
+		text-align: center;
+		background-color: transparent;
+		transition: background-color 0.2s;
+	}
+	
+	#repStandardTimecards_ctl00_StandardTime_Panel1 > table:last-child > tbody > tr > td > table > tbody > tr > td input:not([readonly]):focus
+	{
+		background-color: rgba(0, 0, 0, .1);
+	}
+	
+	#repStandardTimecards_ctl00_StandardTime_Panel1 > table:last-child > tbody > tr > td > table > tbody > tr:nth-child(2) > td.timeDisplay::after,
+	#repStandardTimecards_ctl00_StandardTime_Panel1 > table:last-child > tbody > tr > td > table > tbody > tr:nth-child(2) > td.weekendTimeDisplay::after
+	{
+		content: '';
+		display: block;
+		width: 0%;
+		height: 0.14rem;
+		border-radius: 100rem;
+		background: #3E3E3E;
+		bottom: 0.6rem;
+		left: 15%;
+		position: relative;
+		transition: width 0.3s;
+	}
+	
+	#repStandardTimecards_ctl00_StandardTime_Panel1 > table:last-child > tbody > tr > td > table > tbody > tr:nth-child(2) > td.timeDisplay:focus-within::after,
+	#repStandardTimecards_ctl00_StandardTime_Panel1 > table:last-child > tbody > tr > td > table > tbody > tr:nth-child(2) > td.weekendTimeDisplay:focus-within::after
+	{
+		width: 70%;
+	}
+}
+
 @-moz-document url-prefix("https://emea-timeandexpense.allegisgroup.com/Webtime/Login.aspx"), 
                url-prefix("https://emea-timeandexpense.allegisgroup.com/Webtime/login.aspx") 
 {
