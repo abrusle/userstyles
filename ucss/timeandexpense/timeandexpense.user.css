@@ -282,7 +282,7 @@
 	
 	#Time tbody tr:first-of-type
 	{
-		background-color: var(--lightGreyBlue);
+		background-color: var(--bgColor);
 	}
 	
 	.mdyellow
