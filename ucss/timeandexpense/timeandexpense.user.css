@@ -5,6 +5,7 @@
 @description    Complete restyle of Time & Expense
 @author         Alexis Bruslé
 @homepageURL	https://github.com/abrusle/userstyles/ucss/timeandexpense
+@updateURL		https://raw.github.com/abrusle/userstyles/master/ucss/timeandexpense/timeandexpense.user.css
 
 @var color bgColor "Background" hsl(215, 31%, 97%)
 @var color navbarColor "Navbar Color" white
@@ -33,7 +34,7 @@
 
     .row3
 	{
-		background: rgba(0, 0, 0, 0) url("https://www.toptal.com/designers/subtlepatterns/patterns/email-pattern.png") repeat scroll 0% 0%;
+		/*background: rgba(0, 0, 0, 0) url("https://www.toptal.com/designers/subtlepatterns/patterns/email-pattern.png") repeat scroll 0% 0%;*/
 		opacity: 0.7;
 		height: 5.3em;
 	}
@@ -106,19 +107,19 @@
         transition: opacity 0.2s;
     }
     
-    #prinav a[href="consultanthome.aspx"]::before                      {background-image: url("https://raw.githubusercontent.com/refactoringui/heroicons/master/src/outline-md/md-home.svg");}
-    #prinav a[href="timecardhome.aspx"]::before                        {background-image: url("https://raw.githubusercontent.com/refactoringui/heroicons/master/src/outline-md/md-calendar.svg");}
-    #prinav a[href="expenses.aspx"]::before                            {background-image: url("https://raw.githubusercontent.com/refactoringui/heroicons/master/src/outline-md/md-currency-euro.svg");}
-    #prinav a[href="timeexpensesum.aspx"]::before                      {background-image: url("https://raw.githubusercontent.com/refactoringui/heroicons/master/src/outline-md/md-chart-pie.svg");}
-    #prinav a[href="alltimecards.aspx"]::before                        {background-image: url("https://raw.githubusercontent.com/refactoringui/heroicons/master/src/outline-md/md-search.svg");}
-    #prinav a[href="OperatingCompanyContactInfo.aspx"]::before         {background-image: url("https://raw.githubusercontent.com/refactoringui/heroicons/master/src/outline-md/md-information-circle.svg");}
-    #prinav a[href="allexpensereports.aspx"]::before                   {background-image: url("https://raw.githubusercontent.com/refactoringui/heroicons/master/src/outline-md/md-document-report.svg");}
-    #prinav a[href="UserGuide.aspx?doc=netcenter_tne.pdf"]::before     {background-image: url("https://raw.githubusercontent.com/refactoringui/heroicons/master/src/outline-md/md-book-open.svg");}
-    #prinav a[href="useremailpreferences.aspx"]::before                {background-image: url("https://raw.githubusercontent.com/refactoringui/heroicons/master/src/outline-md/md-adjustments.svg");}
-    #prinav a[href="changepassword.aspx"]::before                      {background-image: url("https://raw.githubusercontent.com/refactoringui/heroicons/master/src/outline-md/md-key.svg");}
-    #prinav a[href="termsandconditions.aspx?qsViewTerms=true"]::before {background-image: url("https://raw.githubusercontent.com/refactoringui/heroicons/master/src/outline-md/md-scale.svg");}
-    #prinav a[href="content/help/en-US/timecardhelp.pdf"]::before      {background-image: url("https://raw.githubusercontent.com/refactoringui/heroicons/master/src/outline-md/md-question-mark-circle.svg");}
-    #prinav a[href="logout.aspx"]::before                              {background-image: url("https://raw.githubusercontent.com/refactoringui/heroicons/master/src/outline-md/md-logout.svg");}
+    #prinav a[href="consultanthome.aspx"]::before                      {background-image: url("https://raw.githubusercontent.com/refactoringui/heroicons/master/src/outline/home.svg");}
+    #prinav a[href="timecardhome.aspx"]::before                        {background-image: url("https://raw.githubusercontent.com/refactoringui/heroicons/master/src/outline/calendar.svg");}
+    #prinav a[href="expenses.aspx"]::before                            {background-image: url("https://raw.githubusercontent.com/refactoringui/heroicons/master/src/outline/currency-euro.svg");}
+    #prinav a[href="timeexpensesum.aspx"]::before                      {background-image: url("https://raw.githubusercontent.com/refactoringui/heroicons/master/src/outline/chart-pie.svg");}
+    #prinav a[href="alltimecards.aspx"]::before                        {background-image: url("https://raw.githubusercontent.com/refactoringui/heroicons/master/src/outline/search.svg");}
+    #prinav a[href="OperatingCompanyContactInfo.aspx"]::before         {background-image: url("https://raw.githubusercontent.com/refactoringui/heroicons/master/src/outline/information-circle.svg");}
+    #prinav a[href="allexpensereports.aspx"]::before                   {background-image: url("https://raw.githubusercontent.com/refactoringui/heroicons/master/src/outline/document-report.svg");}
+    #prinav a[href="UserGuide.aspx?doc=netcenter_tne.pdf"]::before     {background-image: url("https://raw.githubusercontent.com/refactoringui/heroicons/master/src/outline/book-open.svg");}
+    #prinav a[href="useremailpreferences.aspx"]::before                {background-image: url("https://raw.githubusercontent.com/refactoringui/heroicons/master/src/outline/adjustments.svg");}
+    #prinav a[href="changepassword.aspx"]::before                      {background-image: url("https://raw.githubusercontent.com/refactoringui/heroicons/master/src/outline/key.svg");}
+    #prinav a[href="termsandconditions.aspx?qsViewTerms=true"]::before {background-image: url("https://raw.githubusercontent.com/refactoringui/heroicons/master/src/outline/scale.svg");}
+    #prinav a[href="content/help/en-US/timecardhelp.pdf"]::before      {background-image: url("https://raw.githubusercontent.com/refactoringui/heroicons/master/src/outline/question-mark-circle.svg");}
+    #prinav a[href="logout.aspx"]::before                              {background-image: url("https://raw.githubusercontent.com/refactoringui/heroicons/master/src/outline/logout.svg");}
     
     #mainbody
 	{
@@ -170,67 +171,67 @@
 	}
 }
 
-@-moz-document url-prefix("https://emea-timeandexpense.allegisgroup.com/webtime/consultanthome.aspx") 
+@-moz-document regexp(".+emea-timeandexpense\\.allegisgroup\\.com\\/[wW]ebtime\\/[cC]onsultant[hH]ome.aspx.*") 
 {
 	#prinav a[href="consultanthome.aspx"] {background-color: var(--navbarHighlight); color:white;}
 	#prinav a[href="consultanthome.aspx"]::before {filter: brightness(100);}
 }
 
-@-moz-document url-prefix("https://emea-timeandexpense.allegisgroup.com/webtime/timecardhome.aspx") 
+@-moz-document regexp(".+emea-timeandexpense\\.allegisgroup\\.com\\/[wW]ebtime\\/[tT]ime[cC]ard[hH]ome.aspx.*") 
 {
 	#prinav a[href="timecardhome.aspx"] {background-color: var(--navbarHighlight); color:white;}
 	#prinav a[href="timecardhome.aspx"]::before {filter: brightness(100);}
 }
 
-@-moz-document url-prefix("https://emea-timeandexpense.allegisgroup.com/webtime/expenses.aspx") 
+@-moz-document regexp(".+emea-timeandexpense\\.allegisgroup\\.com\\/[wW]ebtime\\/[Ee]xpenses.*") 
 {
 	#prinav a[href="expenses.aspx"] {background-color: var(--navbarHighlight); color:white;}
 	#prinav a[href="expenses.aspx"]::before {filter: brightness(100);}
 }
 
-@-moz-document url-prefix("https://emea-timeandexpense.allegisgroup.com/webtime/timeexpensesum.aspx") 
+@-moz-document regexp(".+emea-timeandexpense\\.allegisgroup\\.com\\/[wW]ebtime\\/[Tt]ime[Ee]xpense[Ss]um.*") 
 {
 	#prinav a[href="timeexpensesum.aspx"] {background-color: var(--navbarHighlight); color:white;}
 	#prinav a[href="timeexpensesum.aspx"]::before {filter: brightness(100);}
 }
 
-@-moz-document url-prefix("https://emea-timeandexpense.allegisgroup.com/webtime/alltimecards.aspx") 
+@-moz-document regexp(".+emea-timeandexpense\\.allegisgroup\\.com\\/[wW]ebtime\\/[Aa]ll[Tt]ime[Cc]ards.*") 
 {
 	#prinav a[href="alltimecards.aspx"] {background-color: var(--navbarHighlight); color:white;}
 	#prinav a[href="alltimecards.aspx"]::before {filter: brightness(100);}
 }
 
-@-moz-document url-prefix("https://emea-timeandexpense.allegisgroup.com/webtime/OperatingCompanyContactInfo.aspx") 
+@-moz-document regexp(".+emea-timeandexpense\\.allegisgroup\\.com\\/[wW]ebtime\\/[oO]perating[cC]ompany[cC]ontact[iI]nfo.*") 
 {
 	#prinav a[href="OperatingCompanyContactInfo.aspx"] {background-color: var(--navbarHighlight); color:white;}
 	#prinav a[href="OperatingCompanyContactInfo.aspx"]::before {filter: brightness(100);}
 }
 
-@-moz-document url-prefix("https://emea-timeandexpense.allegisgroup.com/webtime/allexpensereports.aspx") 
+@-moz-document regexp(".+emea-timeandexpense\\.allegisgroup\\.com\\/[wW]ebtime\\/[aA]ll[Ee]xpense[Rr]eports.*") 
 {
 	#prinav a[href="allexpensereports.aspx"] {background-color: var(--navbarHighlight); color:white;}
 	#prinav a[href="allexpensereports.aspx"]::before {filter: brightness(100);}
 }
 
-@-moz-document url-prefix("https://emea-timeandexpense.allegisgroup.com/webtime/useremailpreferences.aspx") 
+@-moz-document regexp(".+emea-timeandexpense\\.allegisgroup\\.com\\/[wW]ebtime\\/[uU]ser[eE]mail[pP]references.*") 
 {
 	#prinav a[href="useremailpreferences.aspx"] {background-color: var(--navbarHighlight); color:white;}
 	#prinav a[href="useremailpreferences.aspx"]::before {filter: brightness(100);}
 }
 
-@-moz-document url-prefix("https://emea-timeandexpense.allegisgroup.com/webtime/changepassword.aspx") 
+@-moz-document regexp(".+emea-timeandexpense\\.allegisgroup\\.com\\/[wW]ebtime\\/[cC]hange[pP]assword.*") 
 {
 	#prinav a[href="changepassword.aspx"] {background-color: var(--navbarHighlight); color:white;}
 	#prinav a[href="changepassword.aspx"]::before {filter: brightness(100);}
 }
 
-@-moz-document url-prefix("https://emea-timeandexpense.allegisgroup.com/webtime/termsandconditions.aspx?qsViewTerms=true") 
+@-moz-document regexp(".+emea-timeandexpense\\.allegisgroup\\.com\\/[wW]ebtime\\/[tT]erms[aA]nd[cC]onditions.*") 
 {
 	#prinav a[href="termsandconditions.aspx?qsViewTerms=true"] {background-color: var(--navbarHighlight); color:white;}
 	#prinav a[href="termsandconditions.aspx?qsViewTerms=true"]::before {filter: brightness(100);}
 }
 
-@-moz-document url-prefix("https://emea-timeandexpense.allegisgroup.com/Webtime/consultanthome.aspx")
+@-moz-document regexp(".+emea-timeandexpense\\.allegisgroup\\.com\\/[wW]ebtime\\/[cC]onsultant[hH]ome.*")
 {
     /*	     	        *
 	 *	    	        *
@@ -292,7 +293,7 @@
 	
 }
 
-@-moz-document url-prefix("https://emea-timeandexpense.allegisgroup.com/Webtime/TimeCardHome.aspx")
+@-moz-document regexp(".+emea-timeandexpense\\.allegisgroup\\.com\\/[wW]ebtime\\/[tT]ime[cC]ard[hH]ome.aspx.*")
 {
     /*	     	        *
 	 *	    	        *
@@ -307,8 +308,8 @@
 	
 	#mainbody > table
 	{
-		margin-left: 2rem !important;
-		width: calc(100% - 4rem) !important; /* 4rem = 2 * mergin-left */
+		margin-left: 8rem !important;
+		width: calc(100% - 12rem) !important;
 	}
 	
 	#mainbody table:not(.invisible),
@@ -330,9 +331,12 @@
 	
 	#repStandardTimecards_ctl00_StandardTime_Panel1
 	{
-		border-radius: 0.15rem;
+		border-radius: 0.5rem;
 		margin-bottom: 2em;
-		border-color: hsl(0, 0%, 90%);
+		background-color: white;
+		padding: 2em;
+		border: none;
+		box-shadow: 0px 2px 25px -5px rgba(0,0,0,0.2);
 		box-sizing: border-box;
 	}
 	
@@ -360,6 +364,7 @@
 		display: flex;
 		flex-flow: row nowrap;
 		justify-content: flex-start;
+		align-items: center;
 		width: 100%;
 		height: 3.5em;
 	}
@@ -403,7 +408,7 @@
 	#repStandardTimecards_ctl00_StandardTime_Panel1 > table:last-child > tbody > tr > td > table > tbody > tr > td:nth-child(8) {order: 6;}
 	#repStandardTimecards_ctl00_StandardTime_Panel1 > table:last-child > tbody > tr > td > table > tbody > tr > td:nth-child(9) {order: 8;}
 	
-	#repStandardTimecards_ctl00_StandardTime_Panel1 > table:last-child > tbody > tr > td > table > tbody > tr > td input:not([readonly])
+	#repStandardTimecards_ctl00_StandardTime_Panel1 > table:last-child > tbody > tr > td > table > tbody > tr > td input
 	{
 		width: 100% !important;
 		height: 100%;
@@ -413,6 +418,18 @@
 		text-align: center;
 		background-color: transparent;
 		transition: background-color 0.2s;
+	}
+	
+	#repStandardTimecards_ctl00_StandardTime_Panel1 > table:last-child > tbody > tr > td > table > tbody > tr > td.leftth
+	{
+		display: flex;
+		align-items: center;
+	}
+	
+	#repStandardTimecards_ctl00_StandardTime_Panel1 > table:last-child > tbody > tr > td > table > tbody > tr > td input:not([readonly])
+	{
+		transition: background-color 0.2s;
+		background-color: hsla(0, 0%, 100%, .9);
 	}
 	
 	#repStandardTimecards_ctl00_StandardTime_Panel1 > table:last-child > tbody > tr > td > table > tbody > tr > td input:not([readonly]):focus
@@ -442,8 +459,7 @@
 	}
 }
 
-@-moz-document url-prefix("https://emea-timeandexpense.allegisgroup.com/Webtime/Login.aspx"), 
-               url-prefix("https://emea-timeandexpense.allegisgroup.com/Webtime/login.aspx") 
+@-moz-document regexp(".+emea-timeandexpense\\.allegisgroup\\.com\\/[wW]ebtime\\/[lL]ogin.aspx.*") 
 {
 	/*	     	*
 	 *	    	*
@@ -468,7 +484,7 @@
     .row3
     {
         background-repeat: repeat-x;
-        background-position-x: 2em;
+        background-position-x: 3em;
     }
     
     form .boldbluemessage:first-of-type
@@ -479,7 +495,7 @@
     /* Language selection */
     table:nth-of-type(2)
     {
-        background-color: #eee;
+        background-color: white;
         position: fixed !important;
         top: 50%;
         right: 0;
@@ -487,9 +503,9 @@
         box-sizing: border-box;
         padding: 1.5em;
         
-        border: 1px solid #e3e3e3;
-        border-top-left-radius: 0.3rem;
-        border-bottom-left-radius: 0.3rem;
+        border-top-left-radius: 0.8rem;
+        border-bottom-left-radius: 0.8rem;
+		box-shadow: 0px 2px 25px -5px rgba(0,0,0,0.2);
         
         opacity: 0.3;
         transition: opacity 0.15s;
@@ -640,7 +656,7 @@
     }
 }
 
-@-moz-document url-prefix("https://emea-timeandexpense.allegisgroup.com/webtime/timeexpensesum.aspx") 
+@-moz-document regexp(".+emea-timeandexpense\\.allegisgroup\\.com\\/[wW]ebtime\\/[tT]imeexpensesum.aspx.*") 
 {
 	
 	/*	     	*
