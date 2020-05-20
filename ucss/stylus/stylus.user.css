@@ -5,6 +5,7 @@
 @description    Gives a minimalistic look to the Stylus extension.
 @author         Alexis Bruslé
 @homepageURL	https://github.com/abrusle/userstyles/ucss/stylus
+@updateURL      https://raw.githubusercontent.com/abrusle/userstyles/master/ucss/stylus/stylus.user.css
 ==/UserStyle== */
 
 @-moz-document url-prefix("moz-extension://ff031beb-9de3-4d4d-a1fb-001660af5b02") {

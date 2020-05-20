@@ -4,6 +4,8 @@
 @version        0.0.1
 @description    Dark mode for Unity Documentation
 @author         Alexis Bruslé
+@homepageURL	https://github.com/abrusle/userstyles/ucss/unitydocs
+@updateURL		https://raw.githubusercontent.com/abrusle/userstyles/master/ucss/unitydocs/unitydocsdarkmode.user.css
 
 @var color bgColor "Background Color" #181C20
 @var color bgAccent	"Background Accent" #1e242a

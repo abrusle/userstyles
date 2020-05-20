@@ -5,6 +5,7 @@
 @description    Slight changes to the Ecosia search page.
 @author         Alexis Bruslé
 @homepageURL	https://github.com/abrusle/userstyles/ucss/ecosia
+@updateURL	 	https://raw.githubusercontent.com/abrusle/userstyles/master/ucss/ecosia/ecosia.user.css
 
 @var color cardBg "Card Background" hsl(0, 0%, 98%)
 @var color cardHover "Card Hover" hsl(0, 0%, 95%)
