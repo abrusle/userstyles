@@ -1,0 +1,114 @@
+/* ==UserStyle==
+@name           Unity Documentation Dark Mode
+@namespace      https://github.com/abrusle/userstyles
+@version        0.0.1
+@description    Dark mode for Unity Documentation
+@author         Alexis Bruslé
+
+@var color bgColor "Background Color" #181C20
+@var color bgAccent	"Background Accent" #1e242a
+@var color codeBg	"Code Background" #222C37
+==/UserStyle== */
+
+@-moz-document domain("docs.unity3d.com")
+{
+	html
+	{
+		scrollbar-color: #ffffff38 transparent;
+	}
+	
+    body, .sidebar-wrap
+	{
+		background-color: var(--bgColor);
+	}
+	
+	
+	h1
+	{
+		color: #fff;
+	}
+	
+	h2, h3, h4
+	{
+		color: #dbe0e5;
+	}
+	
+	body,
+	#master-wrapper
+	.sidebar-wrap,
+	.content .section ul li::before,
+	div.sidebar-menu ul li a,
+	#q
+	{
+		color: #b6bfc7;
+	}
+	
+	.nextprev, div.toolbar,
+	table.list tr:nth-child(2n+1),
+	.content .section table thead th
+	{
+		background: var(--bgAccent);
+	}
+	
+	.content .section table tbody td,
+	div.sidebar-wrap,
+	.content .section table thead th
+	{
+		border-color: var(--bgAccent)
+	}
+	
+	div.icon span, 
+	div.toolbar .content .arrow,
+	div.header div.search-form input.submit, #mobileSearchBtn
+	{
+		filter: invert(100%) hue-rotate(180deg);
+	}
+	
+	div.sidebar-menu ul li div.leafnode
+	{
+		background-color: transparent;
+		border: none;
+	}
+
+	div.header .more .filler::before,
+	div.header div.search-form::before
+	{
+		filter: brightness(0) saturate(100%) invert(3%) sepia(4%) saturate(6285%) hue-rotate(168deg) brightness(96%) contrast(84%)
+	}
+	
+	#q, #q:focus
+	{
+		background-color: #1A1A1A !important;
+	}
+	
+	div.frontpage-divider
+	{
+		border-color: #ffffff38;
+	}
+	
+	code,
+	pre,
+	pre.codeExampleCS,
+	#feedbackbox
+	{
+		background-color: var(--codeBg) !important;
+		border-radius: 0.1rem;
+	}
+	
+	code
+	{
+		padding: 0.2em 0.3em;
+		margin: 0 0.1em;
+	}
+	
+	pre, pre.codeExampleCS, pre code
+	{
+		border: none;
+		color: #bac1c9;
+	}
+	
+	.sidebar-menu li:hover
+	{
+		background-color: #ffffff17;
+	}
+}
