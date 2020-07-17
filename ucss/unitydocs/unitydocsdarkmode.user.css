@@ -1,15 +1,15 @@
 /* ==UserStyle==
 @name           Unity Documentation Dark Mode
 @namespace      https://github.com/abrusle/userstyles
-@version        0.0.1
+@version        1.0.0
 @description    Dark mode for Unity Documentation
 @author         Alexis Bruslé
-@homepageURL	https://github.com/abrusle/userstyles/ucss/unitydocs
-@updateURL		https://raw.githubusercontent.com/abrusle/userstyles/master/ucss/unitydocs/unitydocsdarkmode.user.css
+@homepageURL	https://github.com/abrusle/userstyles/tree/master/ucss/unitydocs
+@updateURL	https://raw.githubusercontent.com/abrusle/userstyles/master/ucss/unitydocs/unitydocsdarkmode.user.css
 
-@var color bgColor "Background Color" #181C20
-@var color bgAccent	"Background Accent" #1e242a
-@var color codeBg	"Code Background" #222C37
+@var color unityBgColor "Background Color" #181C20
+@var color unityBgAccent	"Background Accent" #1e242a
+@var color unityCodeBg	"Code Background" #222C37
 ==/UserStyle== */
 
 @-moz-document domain("docs.unity3d.com")
@@ -21,7 +21,7 @@
 	
     body, .sidebar-wrap
 	{
-		background-color: var(--bgColor);
+		background-color: var(--unityBgColor);
 	}
 	
 	
@@ -49,14 +49,14 @@
 	table.list tr:nth-child(2n+1),
 	.content .section table thead th
 	{
-		background: var(--bgAccent);
+		background: var(--unityBgAccent);
 	}
 	
 	.content .section table tbody td,
 	div.sidebar-wrap,
 	.content .section table thead th
 	{
-		border-color: var(--bgAccent)
+		border-color: var(--unityBgAccent)
 	}
 	
 	div.icon span, 
@@ -93,7 +93,7 @@
 	pre.codeExampleCS,
 	#feedbackbox
 	{
-		background-color: var(--codeBg) !important;
+		background-color: var(--unityCodeBg) !important;
 		border-radius: 0.1rem;
 	}
 	
