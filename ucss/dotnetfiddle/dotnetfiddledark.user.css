@@ -1,0 +1,196 @@
+/* ==UserStyle==
+@name           .NET Fiddle Dark Theme
+@namespace      https://github.com/abrusle/userstyles
+@version        1.0.0
+@description    A dark theme for dotnetfiddle.net
+@author         Alexis Bruslé
+@homepageURL	https://github.com/abrusle/userstyles/tree/master/ucss/dotnetfiddle
+@updateURL	    https://raw.githubusercontent.com/abrusle/userstyles/master/ucss/dotnetfiddle/dotnetfiddledark.user.css
+
+
+@var color codeBg "Code Background Color" #262626
+@var color consoleBg "Console Background Color" #303030
+@var color codeCol "Code Color" #BDBDBD
+@var color codeFieldCol "Code Field Color" #66C3CC
+@var color codeMethodCol "Code Method Color" #39CC8F
+@var color codeKeywordCol "Code Keyword Color" #6C95EB
+@var color codeClassCol "Code Class Color" #C191FF
+@var color codeNumberCol "Code Number Color" #ED94C0
+@var color codeStringCol "Code String Color" #C9A26D
+
+==/UserStyle== */
+
+@-moz-document domain("dotnetfiddle.net")
+{
+	body, .content, .vsplitbar, .hsplitbar, .sidebar, .expander
+	{
+		background-color: #383838;
+		color: #A5A5AA;
+	}
+	
+	.content .layout-container
+	{
+		max-height: 100%;
+		height: 100% !important;
+	}
+	
+	.content > .layout-container > .pane
+	{
+		height: calc(100% - 14em) !important;
+	}
+	
+	.CodeMirror
+	{
+		background-color: var(--codeBg);
+		color: var(--codeCol);
+	}
+	
+	.cm-type
+	{
+		color: var(--codeClassCol);
+	}
+	
+	.cm-keyword, span.cm-keyword
+	{
+		color: var(--codeKeywordCol) !important;
+	}
+	
+	pre span.cm-variable
+	{
+		color: var(--codeFieldCol) !important;
+	}
+	
+	pre span.cm-string
+	{
+		color: var(--codeStringCol) !important;
+	}
+	
+	pre span.cm-operator
+	{
+		color: var(--codeCol) !important;
+	}
+	
+	pre span.cm-number
+	{
+		color: var(--codeNumberCol) !important;
+	}
+	
+	.cm-keyword + .cm-keyword + .cm-def
+	{
+		color: var(--codeClassCol);
+	}
+	
+	.CodeMirror-cursor
+	{
+		border-color: var(--codeCol);
+	}
+	
+	.CodeMirror-cursor::after
+	{
+		content: '';
+		position: absolute;
+		left: -200vw;
+		top: 0;
+		display: block;
+		width: 400vw;
+		height: 100%;
+		background: hsla(0, 0%, 0%, .15);
+		visibility: visible !important;
+	}
+	
+	.CodeMirror-gutters
+	{
+		background-color: #282828;
+		border-color: #ffffff12;
+	}
+	
+	.layout-container .pane,
+	.navbar-default,
+	.sidebar,
+	.sidebar .sidebar-block,
+	.form-control,
+	.sidebar .btn-default,
+	.sidebar .btn-default:hover,
+	.docked .sidebar .btn-sidebar-pin,
+	.expander,
+	.status-line .name-container input
+	{
+		border-color: hsl(0, 0%, 12%);
+	}
+	
+	.hsplitbar,
+	.vsplitbar
+	{
+		display: none;
+	}
+	
+	.output-container
+	{
+		top: auto !important;
+		bottom: 4px;
+		height: 14em !important;
+	}
+	
+	.output-container div.pane
+	{
+		background-color: var(--consoleBg);
+		color: #A5A5AA;
+		height: cacl(100% - 4px) !important;
+		bottom: 0;
+	}
+	
+	.sidebar
+	{
+		bottom: 0;
+		border-bottom: none;
+	}
+	
+	.sidebar .btn-default
+	{
+		background-color: #424447;
+	}
+	
+	.sidebar .btn-default span,
+	.expander span
+	{
+		filter: invert();
+	}
+	
+	.expander
+	{
+		border-right-width: 1px;
+		border-right-style: solid;
+	}
+	
+	.form-control,
+	.status-line .name-container input
+	{
+		background-color: #424447;
+		color: #c5c5c5;
+	}
+	
+	.status-line
+	{
+		left: 26px;
+	}
+	
+	.main.docked .status-line
+	{
+		left: 186px;
+	}
+	
+	.status-line .name-container input
+	{
+		border-width: 1px;
+		padding: 0.5em;
+	}
+	
+	.sidebar-block.ad,
+    .container-sponsor
+	{
+		overflow: hidden;
+		height: 0;
+		border: none;
+	}
+}
+
